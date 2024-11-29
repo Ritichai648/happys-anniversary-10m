@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/page-end.css">
+    <link rel="stylesheet" href="../css/toggle.css">
+    <title>Happy Anniversary 10m</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>wish we could stay together for a long time</h1>
+        </div>
+        <div class="image">
+            <img src="../image/end.jpg" alt="FAN">
+        </div>
+        <div class="title-bottom">
+            <h2>I love You</h2>
+            <div class="toggle">
+                <div class="button-row">
+                    <button class="button | button--toggle">
+                        <i class="ph-shuffle"></i>
+                    </button>
+                    <button class="button">
+                        <i class="ph-skip-back"></i>
+                    </button>
+                    <button class="button | button--toggle button--play | is-active" onclick="togglePlayPause()">
+                        <i class="ph-pause"></i>
+                        <i class="ph-play"></i>
+                    </button>
+                    <button class="button">
+                        <i class="ph-skip-forward"></i>
+                    </button>
+                    <button class="button | button--toggle">
+                        <i class="ph-repeat"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/phosphor-icons@1.4.2/src/index.js"></script>
+    <script>
+        const buttons = document.querySelectorAll(".button--toggle");
+        const checkbox = document.querySelector(".theme-toggle input");
+
+        for (let button of buttons) {
+            button.addEventListener("click", function () {
+                button.classList.toggle("is-active");
+            });
+        }
+    </script>
+    <script>
+        const audio = new Audio('../1.mp3');
+
+        let isPlaying = true;
+
+        function togglePlayPause() {
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+            } else {
+                audio.play();
+                isPlaying = true;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,300&display=swap');
+
+body {
+    background-color: #fff;
+    font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    padding: 0;
+    color: rgb(241, 121, 225);
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border: 5px solid rgb(207, 139, 247);
+    border-radius: 50px;
+}
+
+.image {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 155px);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    border-radius: 1px;
+    width: 150px;
+    height: 150px;
+}
+
+.btn-next {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-next button {
+    width: 290px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+    border: transparent;
+    border-radius: 30px;
+    background-color: rgb(241, 121, 225);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-next button:hover {
+    background-color: rgb(247, 153, 234);
+}

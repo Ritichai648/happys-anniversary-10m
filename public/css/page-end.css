@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,300&display=swap');
+
+body {
+    background-color: #fff;
+    font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    margin: 35px 200px 20px 200px;
+    color: rgb(241, 121, 225);
+    border: 2px solid rgb(207, 139, 247);
+    border-radius: 30px;
+}
+
+.title h1 {
+    margin: 5px 0 5px 0;
+}
+
+.image img {
+    margin-top: 35px;
+    border-radius: 15px;
+    width: 350px;
+    height: 350px;
+}
+
+.title-bottom {
+    color: rgb(207, 139, 247);
+    font-size: 1.2em;
+}

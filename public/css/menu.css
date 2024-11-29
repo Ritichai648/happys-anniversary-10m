@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,300&display=swap');
+
+body {
+    background-color: #fff;
+    font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    margin-top: 35px;
+    display: flex;
+    gap: 20px; 
+    font-size: 30px;
+    color: rgb(241, 121, 225);
+}
+
+.note p {
+    text-align: center; 
+    margin: 20px;
+    font-family: "Kanit", sans-serif;
+    font-size: 24px;
+    color: #333;  
+}
+.note {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    width: 115vh;   
+    height: 55vh;
+    background: transparent;
+    border: 3px solid rgb(241, 121, 225);  
+    box-shadow: 0 0 5px rgb(241, 121, 225), 0 0 10px rgb(241, 121, 225), 0 0 15px rgb(241, 121, 225);          
+    border-radius: 30px;
+    text-align: center;     
+}
+
+
+.btn-next button {
+    margin-top: 35px;
+    width: 170px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+    border: transparent;
+    border-radius: 30px;
+    background-color: rgb(207, 139, 247);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-next button:hover {
+    background-color: rgb(247, 153, 234);
+}

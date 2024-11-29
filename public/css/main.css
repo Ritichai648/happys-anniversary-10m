@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,300&display=swap');
+
+body {
+    background-color: #fff;
+    font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 800px;
+    height: 550px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: transparent;
+    border: 7px solid rgb(240, 124, 224);
+    border-radius: 50px;
+}
+
+.container-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 45%;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid transparent;
+    margin: 10px 0;
+}
+
+.container-numpad h1 {
+    color: rgb(79, 184, 253);
+}
+
+.container-numpad  {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+#output,
+#status {
+    text-align: left;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(79, 184, 253);
+    border: 3px solid rgb(241, 121, 225);
+    border-radius: 8px;
+    padding-left: 10px;
+}
+
+.num-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.num-btn,
+.num-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    background-color: #fff;
+    text-align: center;
+    color: rgb(79, 184, 253);
+    border: 4px solid rgb(243, 115, 226);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}

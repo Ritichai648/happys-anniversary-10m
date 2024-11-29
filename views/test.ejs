@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เพลงไม่หยุด</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #000;
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        .play_contain {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+        }
+
+        .play_btn {
+            background-color: transparent;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            -o-transition: .25s;
+            -ms-transition: .25s;
+            -moz-transition: .25s;
+            -webkit-transition: .25s;
+            transition: .25s;
+        }
+
+        .play_btn span {
+            background-color: #fff;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            -ms-transform-origin: 0% 0%;
+            -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+            -o-transition: .25s;
+            -ms-transition: .25s;
+            -moz-transition: .25s;
+            -webkit-transition: .25s;
+            transition: .25s;
+        }
+
+        .play_btn span:nth-child(1) {
+            top: 25%;
+            left: 50%;
+            transform: rotate(30deg) translate(-50%, -50%);
+            -webkit-transform: rotate(30deg) translate(-50%, -50%);
+            transition-timing-function: cubic-bezier(.75, 0, .9, 1);
+            -webkit-transition-timing-function: cubic-bezier(.75, 0, .9, 1);
+        }
+
+        .trigger .play_btn span:nth-child(1) {
+            top: 50% !important;
+            left: 70% !important;
+            transform: rotate(-90deg) translate(-50%, -50%) !important;
+            -webkit-transform: rotate(-90deg) translate(-50%, -50%) !important;
+        }
+
+        .play_btn span:nth-child(2) {
+            top: 50%;
+            left: 5%;
+            transform: rotate(90deg) translate(-50%, -50%);
+            -webkit-transform: rotate(90deg) translate(-50%, -50%);
+            transition-timing-function: cubic-bezier(0.5, 0.5, 0.25, 1.5);
+            -webkit-transition-timing-function: cubic-bezier(0.5, 0.5, 0.25, 1.5);
+        }
+
+        .trigger .play_btn span:nth-child(2) {
+            top: 50% !important;
+            left: 30% !important;
+            transform: rotate(90deg) translate(-50%, -50%) !important;
+            -webkit-transform: rotate(90deg) translate(-50%, -50%) !important;
+            -webkit-transition-delay: .5s;
+            transition-delay: .5s;
+        }
+
+        .play_btn span:nth-child(3) {
+            top: 75%;
+            left: 50%;
+            transform: rotate(-30deg) translate(-50%, -50%);
+            -webkit-transform: rotate(-30deg) translate(-50%, -50%);
+            transition-timing-function: cubic-bezier(.75, 0, .9, 1);
+            -webkit-transition-timing-function: cubic-bezier(.75, 0, .9, 1);
+        }
+
+        .trigger .play_btn span:nth-child(3) {
+            top: 50% !important;
+            left: 70% !important;
+            transform: rotate(90deg) translate(-50%, -50%) !important;
+            -webkit-transform: rotate(90deg) translate(-50%, -50%) !important;
+            -webkit-transition-delay: .25s;
+            transition-delay: .25s;
+        }
+    </style>
+    <div class="play_contain">
+        <div class="play_btn" title="Play/Pause" onclick="togglePlay()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        let audio = new Audio('../1.mp3'); // Initialize audio
+        let isPlaying = false; // To track the play/pause state
+
+        function togglePlay() {
+            if (isPlaying) {
+                audio.pause(); // Pause if playing
+                $(".play_contain").removeClass("trigger"); // Revert to play state
+            } else {
+                audio.play(); // Play if paused
+                $(".play_contain").addClass("trigger"); // Switch to pause state
+            }
+            isPlaying = !isPlaying; // Toggle play state
+        }
+
+        // Optional: Pause the audio when the page is closed or refreshed
+        window.onbeforeunload = function() {
+            audio.pause();
+        };
+    </script>
+</body>
+
+</html>
